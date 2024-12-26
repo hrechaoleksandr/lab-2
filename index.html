@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Демонстрація використання CSS</title>
+    <style>
+        /* Стилі для контейнера */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .nav {
+            background-color: #555;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            float: left;
+        }
+
+        .nav a:hover {
+            background-color: #777;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .image-float {
+            float: left;
+            margin-right: 15px;
+        }
+
+        /* Абсолютне позиціонування */
+        #positioned-box {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            background-color: #ffc;
+            padding: 10px;
+            border: 1px solid #999;
+        }
+
+        /* Прихований блок */
+        #hidden-block {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            color: white;
+            overflow: hidden;
+            transition: width 0.5s ease;
+            cursor: pointer;
+        }
+
+        #hidden-block:hover {
+            width: 200px;
+        }
+
+        #hidden-block-content {
+            padding: 10px;
+            display: none;
+        }
+
+        #hidden-block:hover #hidden-block-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Демонстрація CSS</h1>
+</header>
+
+<div class="nav">
+    <a href="#">Головна</a>
+    <a href="#">Про нас</a>
+    <a href="#">Контакти</a>
+</div>
+
+<div class="content">
+    <h2>Основний контент</h2>
+    <p>
+        <img src="https://via.placeholder.com/150" alt="Приклад зображення" class="image-float">
+        Це приклад тексту з обтіканням зображення. CSS дозволяє створювати різноманітні стилі для веб-сторінок.
+    </p>
+    <div id="positioned-box">Абсолютно позиціонований блок</div>
+</div>
+
+<div id="hidden-block">
+    <span>&#9660;</span>
+    <div id="hidden-block-content">
+        <p>Контакти:</p>
+        <a href="https://nure.ua" target="_blank">Сайт НТУ "ХПІ"</a>
+    </div>
+</div>
+
+</body>
+</html>
